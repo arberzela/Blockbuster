@@ -1,0 +1,10 @@
+language: c
+
+install:
+    - make
+
+script:
+  - time ./blockbuster.x test-data/test_mb1.bed > out.tmp
+  - diff test-data/test_mb1_output.txt out.tmp
+
+
